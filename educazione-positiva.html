@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>associazione Maracuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        footer {
+            background-color: #ae435c;
+        }
+
+        body {
+            font-family: Lato;
+        }
+
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+
+        }
+
+        .embed-container {
+            height: 100vh; /* Imposta l'altezza al 100% dell'altezza visibile del browser */
+        }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* The dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: white;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+
+
+<section id="iscrizione" class="container w-2/3 mx-auto text-gray-700 pt-2 font-lato leading-6 text-sm mb-auto">
+    <h2 class="font-semibold text-4xl mb-4 mt-12 text-pink-800">Educazione positiva</h2>
+
+    <img src="images/banner%20educazione%20positiva.png" alt="Banner educazione positiva" class="w-full mb-12">
+    <p class="mb-12">
+        <span class="font-bold text-xl text-gray-600">che cos'è.</span> <br>
+        Essere genitore è una delle esperienze più straordinarie della vita. Ci permette di provare sentimenti di enorme gioia, amore, orgoglio, emozione e felicità, ma anche frustrazione, stanchezza e delusione. Ci obbliga a confrontarci continuamente con noi stessi e con l’altro genitore, soprattutto sull’educazione che abbiamo ricevuto, e che pensiamo di dare ai figli.<br><br>
+        Questi percorsi, strutturati su quattro incontri, promuovono un accompagnamento a una genitorialità positiva.<br><br>
+        Sono un’occasione importante di riflessione e confronto per approfondire, riflettere e mettere in discussione la genitorialità e l’educazione, così per come la conosciamo, per approcciarsi a un nuovo metodo educativo: l'educazione positiva .    </p>
+    <p class="text-pink-800 text-4xl text-center">
+        rivolti a genitori<br>
+        di entrambi i sessi,<br>
+        di figli di qualunque età<br>
+    </p>
+    <p class="mt-6">
+        L'obiettivo è quello di aiutare i genitori a costruire con i loro figli un rapporto solido e duraturo, sostenendoli nella loro crescita fornendo un'ampia riflessione su tutti gli elementi che sono alla base di un rapporto genitori figli positivo e ad aiutarli a riflettere sul loro comportamento per poter comprendere meglio quello dei propri figli.
+        Alla base vi sono quattro principi fondamentali della genitorialità positiva:
+        <ul class="list-outside mt-0 list-none mt-4">
+            <li>- concentrarsi sugli obiettivi a lungo termine;</li>
+            <li>- far sentire il proprio affetto e fornire punti di riferimento;</li>
+            <li>- comprendere cosa pensano e cosa provano i figli;</li>
+            <li>- avere un approccio volto a una risoluzione costruttiva dei problemi.</li>
+        </ul>
+    </p>
+
+    <p class="mb-12 mt-8">
+        Promuovono, in definitiva, l'accompagnamento ad una genitorialità positiva, in favore di un corretto sviluppo del minore e di un benessere dell'adulto che se ne occupa.
+    </p>
+
+
+
+</section>
+
+
+</section>
+
+
+</main>
+<footer class="text-white p-6">
+    <p class="container mx-auto text-center"> Associazione Maracuja &copy; 2024 <br>
+        e-mail: info@maracuja.cloud <br>
+        telefono: +39 3713473618
+    </p></footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Carica il menu dinamicamente
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "navbar.html", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var menu = xhr.responseText;
+                // Inserisci il menu nella pagina
+                document.body.insertAdjacentHTML("afterbegin", menu);
+            }
+        };
+        xhr.send();
+    });
+</script>
+
+</body>
+</html>

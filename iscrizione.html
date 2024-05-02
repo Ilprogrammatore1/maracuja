@@ -1,10 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="it-IT">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>associazione Maracuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        footer {
+            background-color: #ae435c;
+        }
+
+        body {
+            font-family: Lato;
+        }
+
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+
+        }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* The dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: white;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
 </head>
-<body>
-$END$
+<body class="bg-white flex flex-col min-h-screen">
+
+
+    <section id="iscrizione" class="container mx-auto text-gray-900 pt-2 font-lato leading-8 mb-auto">
+        <h2 class="font-semibold text-4xl mb-4 mt-12 text-pink-800">Iscrizione</h2>
+        <p class="text-lg font-bold mt-12">Per aderire all'associazione è necessario compiere dei semplici ma indispensabili passi.</p>
+
+           <p>
+               <ol class="list-decimal list-outside">
+                    <li>Prendere visione dello statuto dell'associazione</li>
+                    <li>scaricare e compilare, in ogni sua parte, il modulo standard se l'iscrizione riguarda una/un maggiorenne, oppure il modulo per minori se l'iscrizione riguarda vostra figlia o vostro figlio. <br>
+
+                    In alternativa, se non si ha la possibilità di stampare, si può compilare uno dei due moduli google presenti nella pagina, in questo caso saremo noi a stamparlo e a consegnarvelo a mano per la firma.
+                    </li>
+                    <div class="flex flex-col md:flex-row md:justify-start justify-center items-center mt-12 mb-12">
+                        <a href="/pdf/Adesione%20-%20standard.pdf"><button class="m-2 px-4 py-2 bg-pink-900 text-white rounded-md hover:bg-pink-700  focus:outline-none focus:bg-pink-700 transition duration-200 ease-in-out flex-auto">Modulo Standard</button></a>
+                        <a href="/pdf/Adesione%20-%20minori.pdf"><button class="m-2 px-4 py-2 bg-pink-900 text-white rounded-md hover:bg-pink-700  focus:outline-none focus:bg-pink-700 transition duration-200 ease-in-out flex-auto">Modulo per minori</button></a>
+                    </div>
+                    <li>versare la quota associativa annuale (01 settembre - 31 agosto) <br>
+
+                     <ul class="list-disc">
+                         <li>in contanti (contestualmente alla restituzione o la firma del presente modulo)</li>
+
+                         <li>bonifico bancario al seguente IBAN IT18I0503411705000000003435 (causale: quota associativa e nome della/del richiedente)</li>
+                     </ul>
+                </ol>
+        </p>
+        <p class="font-black">Fatti questi passaggi il consiglio direttivo ratificherà la vostra richiesta e inserirà voi (o il minore per cui è stata fatta) nel registro dei soci dando copertura assicurativa per le attività svolte con l'associazione.
+        </p>
+
+    </section>
+
+
+    </section>
+
+
+</main>
+<footer class="text-white p-6">
+    <p class="container mx-auto text-center"> Associazione Maracuja &copy; 2024 <br>
+        e-mail: info@maracuja.cloud <br>
+        telefono: +39 3713473618
+    </p></footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Carica il menu dinamicamente
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "navbar.html", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var menu = xhr.responseText;
+                    // Inserisci il menu nella pagina
+                    document.body.insertAdjacentHTML("afterbegin", menu);
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
