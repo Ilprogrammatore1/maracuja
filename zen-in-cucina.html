@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>associazione Maracuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        footer {
+            background-color: #ae435c;
+        }
+
+        body {
+            font-family: Lato;
+        }
+
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+
+        }
+
+        .embed-container {
+            height: 100vh; /* Imposta l'altezza al 100% dell'altezza visibile del browser */
+        }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* The dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: white;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+
+
+<section id="iscrizione" class="container w-2/3 mx-auto text-gray-700 pt-2 font-lato leading-6 text-sm mb-auto">
+    <h2 class="font-semibold text-4xl mb-4 mt-12 text-pink-800">lo Yin e lo Yang delle stagioni</h2>
+
+    <img src="images/Rettangolare%20-%20Lo%20yin%20e%20lo%20yang%20delle%20stagioni.png" alt="Bannerlo Yin e lo Yang delle stagioni" class="w-full mb-12">
+
+    <p class="mt-6">
+        Serate seminariali, dal taglio interattivo, da proporre con cadenza trimestrale, in occasione del cambio di stagione. Vengono proposte riflessioni, esercizi e pratiche quotidiane dallo Shiatsu e dalla macrobiotica, per godere della stagione presente e sostenere il benessere psicofisico e la risposta immunitaria.
+        <br> <span class="font-bold">Obiettivi</span>
+    <ul class="list-outside mt-0 list-disc mt-4">
+        <li>condividere una serata di “filò” rilassante</li>
+        <li>riscoprire il contatto con la Terra e i suoi cicli</li>
+        <li>acquisire nuovi saperi e punti di vista, per, in ultima analisi, conoscere meglio se stessi</li>
+    </ul>
+    </p>
+    <br> <span class="font-bold">Contenuti</span>
+    <ul class="list-outside mt-0 list-disc mt-4">
+        <li>Riflessioni dalla tradizione contadina e dalla tradizione orientale, simbolismi e saperi a confronto.</li>
+        <li>Esercizi per la salute, attenzioni in cucina, pratiche quotidiane per sostenere gli organi e le funzioni più sollecitate in ogni stagione.</li>
+        <li>Breve attività esperienziale, da scegliere a seconda del numero di partecipanti.</li>
+    </ul>
+    </p>
+
+
+
+
+
+</section>
+
+
+</section>
+
+
+</main>
+<footer class="text-white p-6">
+    <p class="container mx-auto text-center"> Associazione Maracuja &copy; 2024 <br>
+        e-mail: info@maracuja.cloud <br>
+        telefono: +39 3713473618
+    </p></footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Carica il menu dinamicamente
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "navbar.html", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var menu = xhr.responseText;
+                // Inserisci il menu nella pagina
+                document.body.insertAdjacentHTML("afterbegin", menu);
+            }
+        };
+        xhr.send();
+    });
+</script>
+
+</body>
+</html>
