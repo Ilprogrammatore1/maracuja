@@ -150,5 +150,23 @@
             xhr.send();
         });
     </script>
+    <!-- JavaScript per gestire l'apertura e la chiusura del menu mobile -->
+    <script>
+        document.body.addEventListener('click', function(event) {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            // Verifica se il clic è avvenuto sul bottone dell'hamburger menu
+            if (event.target === mobileMenuToggle) {
+                // Se sì, toglie o aggiunge la classe per mostrare/nascondere il menu mobile
+                mobileMenu.classList.toggle('translate-x-full');
+            } else {
+                // Altrimenti, chiude il menu mobile se è aperto
+                if (mobileMenu.classList.contains('translate-x-full')) {
+                    mobileMenu.classList.remove('translate-x-full');
+                }
+            }
+        });
+    </script>
 </body>
 </html>

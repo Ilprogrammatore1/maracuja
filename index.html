@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>associazione Maracuja</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
     <style>
@@ -97,7 +98,7 @@
 
 
 
-<section id="header" class="bg-[url('/images/sfondo-carta.png')] min-h-[800px] text-center">
+<section id="header" class="bg-[url('/images/sfondo-carta.png')] min-h-[800px] text-center bg-cover bg-center ">
     <div class="w-11/12 mx-auto flex align-top pt-10 gap-2">
         <a href="https://www.facebook.com/associazione.maracuja"><img src="images/facebook.png" class="w-8"></a>
         <a href="https://www.instagram.com/maracuja.aps/"><img src="images/instagram.png" class="w-8"></a>
@@ -109,9 +110,7 @@
     <div class="flex justify-center items-center pt-48">
         <img src="images/logotrasparente.png" class="max-w-64 transition-image opacity-0" onload="this.classList.add('opacity-100')">
     </div>
-    <div class="absolute bottom-0 left-0 right-0">
-        <img src="images/curva.png" class="pb-0"/>
-    </div>
+
 </section>
 <main class="mx-auto mt-10">
 
@@ -194,6 +193,26 @@
         }
     });
 </script>
+
+<!-- JavaScript per gestire l'apertura e la chiusura del menu mobile -->
+<script>
+    document.body.addEventListener('click', function(event) {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Verifica se il clic è avvenuto sul bottone dell'hamburger menu
+        if (event.target === mobileMenuToggle) {
+            // Se sì, toglie o aggiunge la classe per mostrare/nascondere il menu mobile
+            mobileMenu.classList.toggle('translate-x-full');
+        } else {
+            // Altrimenti, chiude il menu mobile se è aperto
+            if (mobileMenu.classList.contains('translate-x-full')) {
+                mobileMenu.classList.remove('translate-x-full');
+            }
+        }
+    });
+</script>
+
 
 </body>
 </html>
